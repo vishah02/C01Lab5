@@ -160,8 +160,8 @@ app.delete("/deleteAllNotes", express.json(), async (req, res) => {
 
 
 app.patch('/updateNoteColor/:noteId', express.json(), async (req, res) => {
-  const { noteId } = req.params;
   const { color } = req.body;
+  const noteId = req.params.noteId;
 
   if (!ObjectId.isValid(noteId)) {
       return res.status(400).json({ error: "Invalid note ID." });
