@@ -39,6 +39,6 @@ jobs:
     - run: npm i
 
     - name: Run server 
-      run: npm start and sleep 5
+      run: npm start & sleep 5
 
     - run: npm test
